@@ -12,7 +12,7 @@ The DollarAmount class is included in the project provided for this exercise.
 
 The DollarAmount represents an amount of currency in US Dollars. It is meant to be used in place of primitive double or decimal point types in order to represent monetary amounts accurately.
 
-This class is immutable, meaning that no function will change the internal state of an object.
+This class is immutable, meaning that no function will change the internal state of an object. 
 
 
 | Attribute Name | Data Type | Get | Set | Description |
@@ -51,6 +51,41 @@ This class is immutable, meaning that no function will change the internal state
 
 Create three new classes to represent a bank account, savings account, and a simple checking account.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #### 1) BankAccount  
 
 The BankAccount class represents a simple checking or savings account at a bank. The balance is represented in USD using the DollarAmount type.
@@ -61,7 +96,7 @@ The BankAccount class represents a simple checking or savings account at a bank.
 | Attribute Name | Data Type | Get | Set | Description |
 |--------------|-----------|-----|-----|-------------|
 | accountNumber | String | X | X | Returns the account number that the account belongs to. |
-| balance | DollarAmount | X | | Returns the balance value (represented as a DollarAmount object) of the bank account. |
+| balance | DollarAmoDaunt | X | | Returns the balance value (represented as a DollarAmount object) of the bank account. |
 
 
 | Method Name | Return Type | Description |
@@ -80,7 +115,7 @@ The BankAccount class represents a simple checking or savings account at a bank.
 BankAccount b1 = new BankAccount();
 BankAccount b2 = new BankAccount();
 DollarAmount amountToDeposit = new DollarAmount(100);
-DollarAmount newBalance = b2.Deposit(amountToDeposit);
+DollarAmount newBalance = b2.deposit(amountToDeposit);
 DollarAmount amountToTransfer = new DollarAmount(50);
 
 b2.Transfer(b1, amountToTransfer);
@@ -88,7 +123,7 @@ b2.Transfer(b1, amountToTransfer);
 
 2. Write unit tests to verify the functionality of your code.
 
-#### 2) CheckingAccount
+#### 2) CheckingAccount  ------has same behavior as bank account-------
 
 CheckingAccount has all of the same behavior of the BankAccount class you just created, plus the following additional rules:
 
@@ -108,10 +143,21 @@ SavingsAccount has all of the same behavior of the BankAccount class you just cr
 | Override Method | Description |
 |-----------------|-------------|
 | withdraw | If the current balance is less than $150.00 when a withdrawal is made, an additional $2.00 service charge is withdrawn from the account. |
-| withdraw | If a withdrawal is rquested for more than the current balance, the withdrawal fails and balance remains the same. |
+| withdraw | If a withdrawal is requested for more than the current balance, the withdrawal fails and balance remains the same. |
 
 
 2. Write unit tests to verify the functionality of your code.
+(make new file for each test)
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
 
 ### Day Two - Part III
 

@@ -10,7 +10,12 @@ public class DollarAmount {
         this.totalAmountInCents = totalAmountInCents;
     }
     
-    public int getCents() {
+    public DollarAmount (int dollars, int cents) {
+    	this.totalAmountInCents = dollars * 100 + cents; 
+    		
+    	}
+   
+    	public int getCents() {
         return (int)(totalAmountInCents % 100);
     }
     
@@ -68,6 +73,33 @@ public class DollarAmount {
     @Override
     public int hashCode() {
     	return totalAmountInCents;
+ 
     }
-    
+    @Override
+    public String toString() {
+    	String dollarAmount = Integer.toString(getDollars());
+    	String centsAmount = Integer.toString(getCents());
+    	if(getCents() < 10) {
+    		return "$" + dollarAmount + ".0" + centsAmount;
+    	} else {
+    		return "$" + dollarAmount + "." + centsAmount;
+    	}
+
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
