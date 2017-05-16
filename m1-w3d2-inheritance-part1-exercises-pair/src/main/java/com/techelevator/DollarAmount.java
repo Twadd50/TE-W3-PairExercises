@@ -77,14 +77,18 @@ public class DollarAmount {
     }
     @Override
     public String toString() {
-    	String dollarAmount = Integer.toString(getDollars());
-    	String centsAmount = Integer.toString(getCents());
-    	if(getCents() < 10) {
-    		return "$" + dollarAmount + ".0" + centsAmount;
-    	} else {
-    		return "$" + dollarAmount + "." + centsAmount;
-    	}
+	    	String dollarAmount = Integer.toString(getDollars());
+	    	String centsAmount = Integer.toString(getCents());
+	    	if(getCents() < 10) {
+	    		return "$" + dollarAmount + ".0" + centsAmount;
+	    	} else {
+	    		return "$" + dollarAmount + "." + centsAmount;
+	    	}
 
+    }
+    
+    public int toPennies() {
+    		return totalAmountInCents;
     }
 }
 

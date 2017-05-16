@@ -8,11 +8,15 @@ public class BankAccount {
 		balance = new DollarAmount(0);
 	}
 	public DollarAmount deposit (DollarAmount amountToDeposit) {
-		balance = balance.plus(amountToDeposit);
-			return balance;
+		if(amountToDeposit.toPennies() >= 0) {
+			balance = balance.plus(amountToDeposit);
+		}
+		return balance;
 	}
 	public DollarAmount withdraw(DollarAmount amountToWithdraw) {
-		balance = balance.minus(amountToWithdraw);
+		if(amountToWithdraw.toPennies() >= 0) {
+			balance = balance.minus(amountToWithdraw);
+		}
 		return balance;
 	}
 	public void transfer(BankAccount destinationAccount, DollarAmount transferAmount) {
