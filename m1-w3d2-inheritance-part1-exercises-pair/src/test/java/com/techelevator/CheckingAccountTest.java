@@ -28,18 +28,7 @@ public class CheckingAccountTest {
 	
 	@Test
 	public void testPositiveWithdraw() {
-		checkingAccount.deposit(new DollarAmount(10000));
-		assertEquals(1, checkingAccount.withdraw(new DollarAmount(9999)).toPennies());
+		checkingAccount.deposit(new DollarAmount(15000));
+		assertEquals(1, checkingAccount.withdraw(new DollarAmount(14999)).toPennies());
 	}
-	
-	@Test
-	public void testWithdrawWhenNegative() {
-		checkingAccount.withdraw(new DollarAmount(1));
-		assertEquals(-1001, checkingAccount.getBalance().toPennies());
-		assertEquals(-1001, checkingAccount.withdraw(new DollarAmount(8000)).toPennies());
-		assertEquals(-1001, checkingAccount.withdraw(new DollarAmount(7999)).toPennies());
-		assertEquals(-9999, checkingAccount.withdraw(new DollarAmount(7998)).toPennies());
-	}
-	
-	
 }
