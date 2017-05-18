@@ -21,7 +21,7 @@ public class HourlyWorker implements Worker {
 		if(hoursWorked < 40) {
 			return pay;
 		}
-		overtime = hoursWorked - 40;
+		overtime = hoursWorked - 4;
 		pay = pay + (hourlyRate * overtime * 0.5);
 		return pay;
 	}

@@ -6,10 +6,6 @@ import java.util.Random;
 public class MainWorkers {
 
 	public static void main(String[] args) {
-//		
-//		List<String> employees = new ArrayList<>();
-//		List<Integer> hoursWorked = new ArrayList<>();
-//		List<Double> pay = new ArrayList<>();
 		
 		SalaryWorker mickey = new SalaryWorker("Mickey", "Mouse", 60000.00);
 		SalaryWorker goofy = new SalaryWorker("Goofy", "Geef", 40000.00);
@@ -17,10 +13,7 @@ public class MainWorkers {
 		VolunteerWorker minnie = new VolunteerWorker("Minnie", "Mouse");	
 		
 		
-//		int mickeyHours = rnd.nextInt(101);
-//		int minnieHours = rnd.nextInt(101);
-//		int daisyHours = rnd.nextInt(101);
-//		int goofyHours = rnd.nextInt(101);
+
 		
 		Worker[] employees = new Worker[] { mickey, goofy, daisy, minnie };
 		

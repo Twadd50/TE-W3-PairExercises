@@ -5,6 +5,10 @@ In order to practice applying polymorphism, your task is to create interface def
 Each implementation class requires unit tests to verify its correctness.
 
 
+ For the Worker exercise, the Constuctors for each Worker class should take a firstName and lastName as the first parameters.
+
+
+
 ## Worker Interface
 | Attribute Name | Type | Get | Set |
 |--------|-------------|-----|-----|
@@ -14,9 +18,9 @@ Each implementation class requires unit tests to verify its correctness.
 
 <br />
 
-| Method | Return Type |
+| Method | Return Type | double
 |--------|-------------|
-| `calculateWeeklyPay(int hoursWorked)` | `double` |
+| `calculateWeeklyPay(int hoursWorked)` |
 
 
 ## Salary Worker
@@ -57,6 +61,10 @@ An hourly employee "is-a" worker whose hoursWorked express the number of hours f
     overtime = hoursWorked - 40
     pay = pay + (hourly rate * overtime * .5)
        
+       
+       
+       
+       
 ## Volunteer Worker
 
 Create a `VolunteerWorker` class that implements the `Worker` interface.
@@ -70,12 +78,21 @@ A volunteer "is-a" worker who's hoursWorked express the number of hours a volunt
 
     pay = hoursWorked * 0
     
-## Program
+    
+    
+    
+    
+    
+    
+    
+## Program (main)
 
 Following the approach that the morning's examples has led, create a List that represents a company payroll and holds a collection of workers in it. The objective will be to:
 
-* output each employee, their number of hours worked (you can use a random number generator), and their weekly pay using the interface
-* at the end show the sum of total hours worked and total weekly payroll
+* output each employee, 
+their number of hours worked (you can use a random number generator), 
+and their weekly pay 
+using the interface at the end show the sum of total hours worked and total weekly payroll
 
 *Sample Output*
 
@@ -89,3 +106,10 @@ Mouse, Minnie        20                     $2100.00
 Total Hours: 310
 Total Pay: $3600.00
 ```
+
+
+
+
+
+
+
